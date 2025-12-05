@@ -35,23 +35,25 @@ The menu contains a list of checkboxes corresponding to different UI elements. U
 
 Click the "✕ Close" button to close the menu.
 
-### Making Items Visible by Default
+### Changing Default Visibility
 
-By default, the plugin is configured to hide all items. To make them visible by default, you will need to edit the `plugin.py` file.
+The plugin comes with a mix of items that are visible and hidden by default to provide a balanced starting interface. You can customize which items are visible or hidden by default by editing the `plugin.py` file.
 
-In the `plugin.py` file, locate the `TARGETS` list within the `inject_floating_buttons_js` function. For each element that you want to be visible by default, change the `default` property from `false` to `true`.
+In the `plugin.py` file, locate the `TARGETS` list within the `inject_floating_buttons_js` function. For each element, the `default` property controls its initial state:
+- `default: true` makes the item visible by default.
+- `default: false` makes the item hidden by default.
 
-For example, to make the "Header" visible by default, change:
+For example, to make the "Header" visible by default, you would change its entry from `false` to `true`:
 
 ```python
+// From (hidden by default):
 {'id': 'header', 'labels': ['Header'], 'name': 'Header', 'default': false},
-```
 
-to:
-
-```python
+// To (visible by default):
 {'id': 'header', 'labels': ['Header'], 'name': 'Header', 'default': true},
 ```
+
+Conversely, to hide an item like the "Model Selector" by default, you would change its `default` property from `true` to `false`.
 
 Save the file and restart the WAN2GP application for the changes to take effect.
 
