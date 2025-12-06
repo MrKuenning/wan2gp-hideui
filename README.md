@@ -2,6 +2,8 @@
 
 This is a plugin for the [WAN2GP](https://github.com/deepbeepmeep/Wan2GP) application that adds a floating menu to the user interface. This menu allows you to toggle the visibility of various UI elements, making it easier to focus on specific sections of the interface, especially on mobile devices.
 
+![compact_example](https://github.com/user-attachments/assets/73dd5c32-4b60-48ae-8baf-db2423dc1b87)
+
 ## Features
 
 - **Floating Menu:** A convenient, collapsible menu that floats on the bottom right of the screen.
